@@ -1,0 +1,31 @@
+@mixin navbar {
+  .navbar {
+    background-color: $black_100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #fff;
+    &_list {
+      display: none;
+      gap: 20px;
+      align-items: center;
+      @include md {
+        display: flex;
+      }
+    }
+    &_list a {
+      color: #fff;
+      text-decoration: none;
+      font-size: $text_base;
+      font-weight: 700;
+    }
+    .mobile_menu_btn {
+      color: #fff;
+      @include md {
+        display: none;
+      }
+    }
+  }
+}

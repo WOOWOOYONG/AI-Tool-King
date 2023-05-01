@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+* {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+  background-color: $black_100;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.slogan {
+  color: #fff;
+  margin-bottom: 160px;
+  &_title {
+    font-size: $text_heading01;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 64px;
+    @include lg {
+      font-size: $text_display02;
+      margin-bottom: 0;
+    }
+  }
+  &_content {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 238px;
+
+    p {
+      font-size: $text_heading04;
+      font-weight: 700;
+
+      width: 75%;
+      line-height: 1.2;
+      @include lg {
+        font-size: $text_heading01;
+        width: 50%;
+      }
+    }
+  }
+  .arrows {
+    @include arrows;
+    justify-content: flex-start;
+  }
+}
+
+.payment {
+  color: #fff;
+  margin-bottom: 120px;
+  @include lg {
+    margin-bottom: 160px;
+  }
+  &_title {
+    font-size: $text_heading06;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    @include lg {
+      font-size: $text_heading03;
+      margin-bottom: 80px;
+    }
+  }
+  &_detail_group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_detail_card_wrapper {
+    @include col-1;
+    @include md {
+      @include col-6;
+    }
+  }
+
+  &_detail_card {
+    border: 1px solid $black_80;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    &_up {
+      padding: 20px 20px 58px 32px;
+      border-bottom: 1px solid $black_80;
+      @include lg {
+        padding: 20px 32px 132px 32px;
+      }
+    }
+    &_name {
+      font-size: $text_heading03;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    &_feat {
+      list-style-type: none;
+      li {
+        line-height: 1.5;
+      }
+      .feat_description {
+        color: $black_20;
+      }
+      .feat_description:before {
+        content: '·';
+        font-size: 16px;
+        margin-right: 10px;
+      }
+    }
+    &_bottom {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include lg {
+        padding: 20px 32px;
+      }
+      p {
+        font-size: $text_heading06;
+        font-weight: 700;
+      }
+      span {
+        font-size: $text_heading06;
+        color: $black_60;
+      }
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .material-icons {
+        font-size: $text_base;
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.rules {
+  color: #fff;
+  display: block;
+  margin-bottom: 160px;
+  @include lg {
+    display: flex;
+  }
+  &_title {
+    font-size: $text_heading06;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 48px;
+    @include lg {
+      font-size: $text_heading03;
+      width: 33.33%;
+      margin-bottom: 0;
+    }
+  }
+  &_list {
+    width: 100%;
+    @include lg {
+      width: 66.6667%;
+    }
+  }
+  &_list_item {
+    padding-bottom: 24px;
+    border-bottom: 1px solid $black_80;
+    margin-bottom: 40px;
+  }
+  &_list_title {
+    font-size: $text_heading03;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    @include lg {
+      font-size: $text_heading01;
+    }
+  }
+  &_list_content {
+    font-size: $text_base;
+    line-height: 1.2;
+    @include lg {
+      font-size: $text_heading03;
+    }
+  }
+}
+
+.question {
+  padding-top: 120px;
+  padding-bottom: 0;
+  color: #fff;
+  display: block;
+  border-bottom: none;
+  @include lg {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    display: flex;
+    border-bottom: 1px solid #fff;
+  }
+  &_title {
+    font-size: $text_heading06;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 24px;
+    @include lg {
+      width: 33.33%;
+      font-size: $text_heading03;
+      margin-bottom: 0;
+    }
+  }
+  &_list {
+    width: 100%;
+    padding-bottom: 120px;
+    border-bottom: 1px solid #fff;
+    @include lg {
+      width: 66.6667%;
+      border-bottom: none;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+      font-size: $text_heading06;
+      font-weight: 700;
+      line-height: 1.2;
+      border: 1px solid $black_80;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      cursor: pointer;
+      transition: ease-in-out 0.3s;
+      &:hover {
+        border: 1px solid #fff;
+      }
+      .material-icons {
+        margin-right: 12px;
+      }
+    }
+  }
+}

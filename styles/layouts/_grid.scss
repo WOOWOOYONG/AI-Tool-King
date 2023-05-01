@@ -1,0 +1,36 @@
+.container {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 0 12px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -12px;
+  margin-left: -12px;
+}
+
+@mixin col-1 {
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+@mixin col-4 {
+  width: 33.3333%;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+@mixin col-6 {
+  width: 50%;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+@mixin col-8 {
+  width: 66.6666%;
+  padding-right: 12px;
+  padding-left: 12px;
+}

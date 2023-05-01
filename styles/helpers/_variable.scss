@@ -1,0 +1,41 @@
+// font-size
+$text_display01: 160px;
+$text_display02: 120px;
+$text_display03: 80px;
+$text_heading01: 48px;
+$text_heading02: 40px;
+$text_heading03: 32px;
+$text_heading04: 28px;
+$text_heading05: 24px;
+$text_heading06: 20px;
+$text_base: 16px;
+$text_small: 14px;
+$text_tiny: 12px;
+
+// color
+$black_100: #020202;
+$black_80: #525252;
+$black_60: #919191;
+$black_40: #d1d1d1;
+$black_20: #f2f2f2;
+$primary: #f18724;
+$surface: #f2efe7;
+$logo_shadow: linear-gradient(
+  90deg,
+  #000000 0%,
+  rgba(0, 0, 0, 0.991615) 11.79%,
+  rgba(0, 0, 0, 0.967585) 21.38%,
+  rgba(0, 0, 0, 0.9296) 29.12%,
+  rgba(0, 0, 0, 0.879348) 35.34%,
+  rgba(0, 0, 0, 0.818519) 40.37%,
+  rgba(0, 0, 0, 0.7488) 44.56%,
+  rgba(0, 0, 0, 0.671881) 48.24%,
+  rgba(0, 0, 0, 0.589452) 51.76%,
+  rgba(0, 0, 0, 0.5032) 55.44%,
+  rgba(0, 0, 0, 0.414815) 59.63%,
+  rgba(0, 0, 0, 0.325985) 64.66%,
+  rgba(0, 0, 0, 0.2384) 70.88%,
+  rgba(0, 0, 0, 0.153748) 78.62%,
+  rgba(0, 0, 0, 0.0737185) 88.21%,
+  rgba(0, 0, 0, 0) 100%
+);

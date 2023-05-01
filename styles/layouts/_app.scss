@@ -1,0 +1,232 @@
+@mixin app {
+  background-color: #fff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-radius: 20px;
+  @include lg {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    border-radius: 160px;
+  }
+  &_title {
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: $text_heading03;
+    padding: 0 40px;
+    @include md {
+      margin-bottom: 80px;
+      padding: 0;
+    }
+    @include lg {
+      font-size: $text_display03;
+    }
+  }
+  &_category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+    @include md {
+      margin-bottom: 40px;
+    }
+  }
+  &_searchbar {
+    position: relative;
+    margin-bottom: 24px;
+    .app_search_icon {
+      position: absolute;
+      top: 23px;
+      left: 43px;
+    }
+    .app_search_input {
+      width: 100%;
+      background-color: $black_20;
+      color: $black_60;
+      font-size: $text_base;
+      line-height: 1.5;
+      border-radius: 16px;
+      padding: 20px 0;
+      text-indent: 76px;
+      border: none;
+    }
+  }
+  .app_select_wrapper {
+    position: relative;
+    width: 134px;
+  }
+  .app_select_filter {
+    position: absolute;
+    left: 86.7px;
+    top: 40%;
+    font-size: $text_base;
+    pointer-events: none;
+  }
+  .app_select_sort_wrapper {
+    position: relative;
+    width: 164px;
+    order: 2;
+    @include lg {
+      order: 3;
+    }
+  }
+  .app_select_arrow {
+    position: absolute;
+    left: 116px;
+    top: 20px;
+    pointer-events: none;
+  }
+  .app_select {
+    width: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 20px 40px;
+    border: 1px solid $black_20;
+    border-radius: 16px;
+    cursor: pointer;
+    order: 1;
+    font-size: $text_base;
+  }
+  .app_category_list {
+    display: flex;
+    gap: 8px;
+    color: $black_60;
+    line-height: 1.5;
+    order: 3;
+    margin-top: 16px;
+    overflow: scroll;
+    include lg {
+      order: 2;
+      margin-top: 0;
+    }
+  }
+  .app_category_list_item {
+    padding: 8px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+      font-weight: 700;
+      background-color: $black_20;
+      border-radius: 16px;
+      color: $black_100;
+    }
+  }
+  .item_active {
+    font-weight: 700;
+    background-color: $black_20;
+    border-radius: 16px;
+    color: $black_100;
+  }
+  .material-icons {
+    cursor: pointer;
+  }
+  .app_product_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    @include md {
+      margin-bottom: 40px;
+    }
+  }
+  .app_product {
+    margin-bottom: 24px;
+    display: block;
+    justify-content: center;
+    @include col-1;
+    @include md {
+      @include col-4;
+      display: flex;
+    }
+    &_card {
+      border: 1px solid $black_20;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    &_img_wrapper {
+      overflow: hidden;
+    }
+    img {
+      height: 312px;
+      object-fit: cover;
+      width: 100%;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    &_header {
+      padding: 20px 32px;
+      border-bottom: 1px solid $black_20;
+      flex-grow: 1;
+    }
+    &_title {
+      font-size: $text_heading06;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    &_content {
+      font-size: $text_small;
+      color: $black_80;
+      line-height: 1.5;
+    }
+    &_middle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 32px;
+      border-bottom: 1px solid $black_20;
+      flex-grow: 0;
+      p:first-child {
+        font-weight: 700;
+        line-height: 1.5;
+      }
+    }
+    &_footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 32px;
+      flex-grow: 0;
+      .material-icons {
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+    &_pages {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $text_small;
+      font-weight: 700;
+      line-height: 1.5;
+      gap: 4px;
+      @include md {
+        justify-content: flex-end;
+      }
+      li {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+
+        &:hover {
+          background-color: $black_100;
+          color: #fff;
+        }
+      }
+      .page_active {
+        background-color: $black_100;
+        color: #fff;
+      }
+    }
+  }
+}

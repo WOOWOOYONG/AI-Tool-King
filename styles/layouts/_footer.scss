@@ -1,0 +1,94 @@
+@mixin footer {
+  .footer_top {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    @include md {
+      flex-direction: row;
+    }
+    &_link {
+      a {
+        text-decoration: none;
+        font-size: $text_heading01;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.2;
+        @include md {
+          font-size: $text_display03;
+        }
+      }
+      li:first-child {
+        margin-bottom: 8px;
+      }
+    }
+
+    @include logo;
+    .logo {
+      margin-bottom: 40px;
+      @include md {
+        margin-bottom: 0;
+      }
+    }
+    .logo_star {
+      width: 35.6px;
+      height: 40px;
+    }
+    .logo_name {
+      width: 189px;
+      height: 40px;
+    }
+  }
+  .footer_bottom {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    p {
+      color: #fff;
+      font-weight: 700;
+      line-height: 1.5;
+      @include md {
+        margin-right: 100px;
+      }
+    }
+    &_social {
+      display: flex;
+      gap: 20px;
+      order: 3;
+      width: 100%;
+      margin-top: 24px;
+      @include md {
+        order: 2;
+        width: auto;
+        margin-top: 0;
+      }
+    }
+    &_socail_link {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+    .back_link {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-left: auto;
+      order: 2;
+      @include md {
+        order: 3;
+      }
+      .material-icons {
+        pointer-events: none;
+      }
+    }
+  }
+}

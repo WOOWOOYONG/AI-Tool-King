@@ -1,0 +1,19 @@
+@mixin logo {
+  .logo_star {
+    width: 21.36px;
+    height: 24px;
+    margin-right: 13.63px;
+    @include md {
+      width: 35.6px;
+      height: 40px;
+    }
+  }
+  .logo_name {
+    width: 113.4px;
+    height: 24px;
+    @include md {
+      width: 189px;
+      height: 40px;
+    }
+  }
+}
