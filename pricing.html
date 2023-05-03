@@ -29,6 +29,7 @@
             <li><a href="pricing.html">定價</a></li>
           </ul>
           <span class="material-icons mobile_menu_btn"> menu </span>
+          <span class="material-icons mobile_menu_close_btn hide"> close </span>
         </nav>
       </div>
     </header>
@@ -178,27 +179,33 @@
           </div>
           <div class="app_category">
             <div class="app_select_wrapper">
-              <select class="app_select">
-                <option selected>篩選</option>
-                <optgroup>
-                  <option disabled>AI 模型</option>
-                  <option value="all">所有模型</option>
-                  <option value="all">卡卡</option>
-                  <option value="all">杰杰</option>
-                  <option value="all">琪琪</option>
-                  <option value="all">昊昊</option>
-                </optgroup>
-                <optgroup>
-                  <option disabled>類型</option>
-                  <option value="all">篩選項目1</option>
-                  <option value="all">篩選項目2</option>
-                  <option value="all">篩選項目3</option>
-                  <option value="all">篩選項目4</option>
-                  <option value="all">篩選項目5</option>
-                  <option value="all">篩選項目6</option>
-                </optgroup>
-              </select>
-              <span class="material-icons app_select_filter"> filter_alt </span>
+              <div class="app_select">
+                <p>篩選</p>
+                <span class="material-icons app_select_filter">
+                  filter_alt
+                </span>
+              </div>
+              <div class="app_select_options hide_dropdown">
+                <ul class="options_modellist">
+                  <li class="options_title">AI 模型</li>
+                  <li class="options_item">所有模型</li>
+                  <li class="options_item">卡卡</li>
+                  <li class="options_item">杰杰</li>
+                  <li class="options_item">琪琪</li>
+                  <li class="options_item">昊昊</li>
+                  <li></li>
+                </ul>
+                <ul class="options_itemlist">
+                  <li class="options_title">類型</li>
+                  <li class="options_item">所有類型</li>
+                  <li class="options_item">篩選項目1</li>
+                  <li class="options_item">篩選項目2</li>
+                  <li class="options_item">篩選項目3</li>
+                  <li class="options_item">篩選項目4</li>
+                  <li class="options_item">篩選項目5</li>
+                  <li class="options_item">篩選項目6</li>
+                </ul>
+              </div>
             </div>
             <ul class="app_category_list">
               <li class="app_category_list_item item_active">全部</li>
@@ -210,15 +217,20 @@
               <li class="app_category_list_item">生產力</li>
             </ul>
             <div class="app_select_sort_wrapper">
-              <select class="app_select">
-                <option value="newfirst">由新到舊</option>
-                <option value="oldfirst">由舊到新</option>
-              </select>
-              <span class="material-icons app_select_arrow"> expand_more </span>
+              <div class="app_select">
+                <p>由新到舊</p>
+                <span class="material-icons app_select_arrow">
+                  expand_more
+                </span>
+                <ul class="sort_options hide_dropdown">
+                  <li class="sort_options_item">由新到舊</li>
+                  <li class="sort_options_item">由舊到新</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="app_product_list row">
-            <div class="app_product col-4">
+          <ul class="app_product_list row">
+            <li class="app_product">
               <div class="app_product_card">
                 <div class="app_product_img_wrapper">
                   <img src="./assets/images/1.jpg" alt="product" />
@@ -238,8 +250,8 @@
                   <span class="material-icons"> share </span>
                 </div>
               </div>
-            </div>
-            <div class="app_product col-4">
+            </li>
+            <li class="app_product">
               <div class="app_product_card">
                 <div class="app_product_img_wrapper">
                   <img src="./assets/images/2.jpg" alt="product" />
@@ -260,8 +272,8 @@
                   <span class="material-icons"> share </span>
                 </div>
               </div>
-            </div>
-            <div class="app_product col-4">
+            </li>
+            <li class="app_product">
               <div class="app_product_card">
                 <div class="app_product_img_wrapper">
                   <img src="./assets/images/3.jpg" alt="product" />
@@ -281,8 +293,8 @@
                   <span class="material-icons"> share </span>
                 </div>
               </div>
-            </div>
-            <div class="app_product col-4">
+            </li>
+            <li class="app_product">
               <div class="app_product_card">
                 <div class="app_product_img_wrapper">
                   <img src="./assets/images/4.jpg" alt="product" />
@@ -302,8 +314,8 @@
                   <span class="material-icons"> share </span>
                 </div>
               </div>
-            </div>
-            <div class="app_product col-4">
+            </li>
+            <li class="app_product">
               <div class="app_product_card">
                 <div class="app_product_img_wrapper">
                   <img src="./assets/images/5.jpg" alt="product" />
@@ -324,8 +336,8 @@
                   <span class="material-icons"> share </span>
                 </div>
               </div>
-            </div>
-            <div class="app_product col-4">
+            </li>
+            <li class="app_product">
               <div class="app_product_card">
                 <div class="app_product_img_wrapper">
                   <img src="./assets/images/6.jpg" alt="product" />
@@ -345,8 +357,8 @@
                   <span class="material-icons"> share </span>
                 </div>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
           <ul class="app_product_pages">
             <li class="page_active">1</li>
             <li>2</li>
@@ -360,20 +372,56 @@
       <section class="container question">
         <h2 class="question_title">常見問題</h2>
         <ul class="question_list">
-          <li>
-            <span class="material-icons"> add </span>如何選擇適合的AI模型？
+          <li class="question_item">
+            <p class="question_content">
+              <span class="material-icons open_question"> add </span
+              ><span class="material-icons close_question"> remove </span
+              >如何選擇適合的AI模型？
+            </p>
+            <p class="answer">
+              選擇適合的
+              Al模型需要考慮您的應用場景、需要解決的問題、可用的資源以及預算等因素。可以通過對比不同模型的性能、準確率、速度等指標，以及與其他用戶的評價和反饋，來選擇最適合的模型。
+            </p>
           </li>
-          <li>
-            <span class="material-icons"> add </span
-            >租用模型的費用是如何計算的？
+          <li class="question_item">
+            <p class="question_content">
+              <span class="material-icons open_question"> add </span
+              ><span class="material-icons close_question"> remove </span
+              >租用模型的費用是如何計算的？
+            </p>
+            <p class="answer">
+              租用模型的費用通常會根據模型的性能和使用時間等因素進行計算。具體而言，模型的性能可以根據其精度、速度、佔用資源等指標來評估；而使用時間可以根據租用時間的長短來計算，通常會按小時、天或月來計算。綜合考慮這些因素，系統會自動計算出對應的租用費用。
+            </p>
           </li>
-          <li><span class="material-icons"> add </span>如何進行付款？</li>
-          <li>
-            <span class="material-icons"> add </span>租用模型的期限是多久？
+          <li class="question_item">
+            <p class="question_content">
+              <span class="material-icons open_question"> add </span
+              ><span class="material-icons close_question"> remove </span
+              >如何進行付款？
+            </p>
+            <p class="answer">
+              付款方式可以通過網站上提供的線上支付平臺進行支付。具體而言，您可以選擇使用信用卡、銀行轉帳、電子錢包等不同的支付方式進行支付。在支付前，您需要先登錄網站並選擇適合的租用方案，系統會自動計算出對應的租用費用和支付金額，然後您可以選擇適合的支付方式進行支付。完成支付後，系統會自動向你提供相應的服務。
+            </p>
           </li>
-          <li>
-            <span class="material-icons"> add </span
-            >如果在使用過程中遇到問題，應該怎麼處理？
+          <li class="question_item">
+            <p class="question_content">
+              <span class="material-icons open_question"> add </span
+              ><span class="material-icons close_question"> remove </span
+              >租用模型的期限是多久？
+            </p>
+            <p class="answer">
+              租用模型的期限可以根據您的需求進行設置，通常可以選擇幾個小時、幾天或幾個月等不同的時間段。
+            </p>
+          </li>
+          <li class="question_item">
+            <p class="question_content">
+              <span class="material-icons open_question"> add </span
+              ><span class="material-icons close_question"> remove </span
+              >如果在使用過程中遇到問題，應該怎麼處理？
+            </p>
+            <p class="answer">
+              如果在使用過程中遇到問題，您可以聯繫客服或技術支持人員進行咨詢或報告問題。您也可以通過網站上的幫助中心或社區論壇尋找相關的解決方案和回答
+            </p>
           </li>
         </ul>
       </section>
@@ -381,7 +429,7 @@
     <footer class="container">
       <div class="footer_top">
         <ul class="footer_top_link">
-          <li><a href="#">首頁</a></li>
+          <li><a href="index.html">首頁</a></li>
           <li><a href="pricing.html">定價</a></li>
         </ul>
         <div class="logo">
@@ -406,5 +454,7 @@
         >
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="all.js"></script>
   </body>
 </html>

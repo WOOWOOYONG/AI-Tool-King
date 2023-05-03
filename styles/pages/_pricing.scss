@@ -7,6 +7,10 @@ body {
   background-color: $black_100;
 }
 
+.stay {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -34,7 +38,6 @@ img {
     p {
       font-size: $text_heading04;
       font-weight: 700;
-
       width: 75%;
       line-height: 1.2;
       @include lg {
@@ -81,6 +84,10 @@ img {
     border: 1px solid $black_80;
     border-radius: 16px;
     margin-bottom: 24px;
+    transition: ease-in-out 0.2s;
+    &:hover {
+      border: 1px solid #fff;
+    }
     &_up {
       padding: 20px 20px 58px 32px;
       border-bottom: 1px solid $black_80;
@@ -219,13 +226,8 @@ img {
       width: 66.6667%;
       border-bottom: none;
     }
-    li {
-      display: flex;
-      align-items: center;
+    .question_item {
       padding: 20px 40px;
-      font-size: $text_heading06;
-      font-weight: 700;
-      line-height: 1.2;
       border: 1px solid $black_80;
       border-radius: 16px;
       margin-bottom: 16px;
@@ -237,6 +239,45 @@ img {
       .material-icons {
         margin-right: 12px;
       }
+      .close_question {
+        display: none;
+      }
+      .answer {
+        padding-top: 16px;
+        line-height: 1.5;
+        display: none;
+      }
     }
+    .question_content {
+      display: flex;
+      align-items: center;
+      font-size: $text_heading06;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .question_item_active {
+      .open_question {
+        display: none;
+      }
+      .close_question {
+        display: block;
+      }
+      .answer {
+        line-height: 1.5;
+        display: block;
+        animation: fade 0.2s ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

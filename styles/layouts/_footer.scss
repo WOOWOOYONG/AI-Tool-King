@@ -90,5 +90,19 @@
         pointer-events: none;
       }
     }
+    .hide {
+      display: none;
+    }
+  }
+  .mobile_footer_bottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+    border-top: 1px solid #fff;
+    left: 12px;
+    right: 12px;
+    @include md {
+      position: static;
+    }
   }
 }

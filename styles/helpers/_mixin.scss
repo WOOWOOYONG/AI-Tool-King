@@ -1,4 +1,4 @@
-@mixin small {
+@mixin sm {
   @media (min-width: 420px) {
     @content;
   }

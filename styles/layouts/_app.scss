@@ -56,10 +56,48 @@
     position: relative;
     width: 134px;
   }
+  .app_select_options {
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    width: 240px;
+    background: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    .options_item {
+      line-height: 1.5;
+      padding: 8px 32px 8px 40px;
+      &:hover {
+        background-color: $black_20;
+        cursor: pointer;
+      }
+    }
+  }
+  .options_modellist {
+    margin-bottom: 24px;
+    li:last-child {
+      border-bottom: 1px solid $black_20;
+      margin-left: 40px;
+      margin-right: 32px;
+    }
+  }
+  .options_title {
+    font-size: $text_tiny;
+    color: $black_60;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    padding-left: 40px;
+  }
   .app_select_filter {
     position: absolute;
     left: 86.7px;
-    top: 40%;
+    transform: translate(-50%, -50%);
+    top: 50%;
     font-size: $text_base;
     pointer-events: none;
   }
@@ -74,10 +112,32 @@
   .app_select_arrow {
     position: absolute;
     left: 116px;
-    top: 20px;
+    top: 30%;
     pointer-events: none;
   }
+  .sort_options {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 100%;
+    margin-top: 4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    &_item {
+      line-height: 1.5;
+      padding: 8px 40px;
+      &:hover {
+        background-color: $black_20;
+      }
+    }
+  }
+
   .app_select {
+    display: block;
+    background-color: #fff;
     width: 100%;
     appearance: none;
     -moz-appearance: none;
@@ -88,6 +148,10 @@
     cursor: pointer;
     order: 1;
     font-size: $text_base;
+    margin-bottom: 4px;
+    &:hover {
+      border: 1px solid $black_100;
+    }
   }
   .app_category_list {
     display: flex;
@@ -95,8 +159,8 @@
     color: $black_60;
     line-height: 1.5;
     order: 3;
-    margin-top: 16px;
     overflow: scroll;
+    margin: 0 auto;
     include lg {
       order: 2;
       margin-top: 0;
@@ -229,4 +293,8 @@
       }
     }
   }
+}
+
+.hide_dropdown {
+  display: none;
 }

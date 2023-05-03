@@ -12,6 +12,10 @@ body {
   background-color: $black_100;
 }
 
+.stay {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -46,6 +50,11 @@ header {
     cursor: pointer;
     margin-bottom: 100px;
     background-color: $black_100;
+    transition: ease-in-out 0.2s;
+    &:hover {
+      background-color: #fff;
+      color: $black_100;
+    }
   }
   .arrows {
     @include arrows;
@@ -113,11 +122,13 @@ header {
     }
 
     .service_card {
+      height: auto;
       padding: 40px 20px;
       border-radius: 16px;
       border: 1px solid $black_80;
       @include lg {
         padding: 80px 40px;
+        height: 366px;
       }
     }
     .service_card_title {
@@ -134,7 +145,10 @@ header {
 }
 
 .feedback {
-  margin-bottom: 160px;
+  margin-bottom: 120px;
+  @include md {
+    margin-bottom: 160px;
+  }
   &_title {
     font-size: $text_heading06;
     font-weight: 900;
@@ -145,20 +159,27 @@ header {
       margin-bottom: 80px;
     }
   }
+  &_logo_wrapper {
+    position: relative;
+  }
   &_logo_top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 12px;
-    overflow: hidden;
+    overflow-x: scroll;
     @include md {
       margin-bottom: 20px;
     }
+  }
+  &_logo_item {
+    min-width: 160px;
   }
   &_logo_bottom {
     display: flex;
     justify-content: space-between;
     margin-bottom: 48px;
-    overflow: hidden;
+    overflow-x: scroll;
+
     .feedback_logo:nth-child(9),
     .feedback_logo:nth-child(15) {
       opacity: 0.15;
@@ -167,83 +188,82 @@ header {
       margin-bottom: 160px;
     }
   }
-  &_logo_linear_left {
-    position: relative;
-    .feedback_shadow_left {
-      position: absolute;
+
+  &_shadow_left {
+    position: absolute;
+    width: 40px;
+    height: 50%;
+    background: $logo_shadow;
+    @include md {
       width: 196px;
-      height: 100%;
-      background: $logo_shadow;
     }
   }
-  &_logo_linear_right {
-    position: relative;
-    .feedback_shadow_right {
-      position: absolute;
-      right: 0;
-      width: 196px;
-      height: 100%;
-      background: $logo_shadow;
-      transform: rotate(-180deg);
+
+  &_shadow_right {
+    position: absolute;
+    right: -1px;
+    width: 41px;
+    height: 50%;
+    background: $logo_shadow;
+    transform: rotate(-180deg);
+    @include md {
+      width: 197px;
     }
   }
-  &_detail {
+
+  .swiper_container {
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+  }
+
+  &_card {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: $feedback_card_shadow;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    @include md {
+      padding: 40px;
+      height: 400px;
+      margin-bottom: 0;
+    }
+  }
+
+  &_rating {
     display: flex;
-    flex-wrap: wrap;
-    .feedback_card_wrapper {
-      @include col-1;
-      @include lg {
-        @include col-4;
-      }
-    }
-    .feedback_card {
-      background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0px 100px 80px rgba(18, 18, 18, 0.07),
-        0px 41.7776px 33.4221px rgba(18, 18, 18, 0.0503198),
-        0px 22.3363px 17.869px rgba(18, 18, 18, 0.0417275),
-        0px 12.5216px 10.0172px rgba(18, 18, 18, 0.035),
-        0px 6.6501px 5.32008px rgba(18, 18, 18, 0.0282725),
-        0px 2.76726px 2.21381px rgba(18, 18, 18, 0.0196802);
-      border-radius: 16px;
-      padding: 20px;
-      @include md {
-        padding: 40px;
-      }
-    }
-    ul {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 20px;
-    }
-    .feedback_card_content {
-      color: $black_20;
-      line-height: 1.5;
-      height: auto;
-      margin-bottom: 20px;
-      @include lg {
-        height: 215px;
-      }
-    }
+    gap: 5.33px;
+    color: #fff;
+    margin-bottom: 20px;
     .material-icons {
-      color: #fff;
       font-size: $text_base;
     }
-    .feedback_user {
-      display: flex;
-      gap: 16px;
+  }
+  &_card_content {
+    color: $black_20;
+    line-height: 1.5;
+    height: auto;
+    margin-bottom: 20px;
+    @include md {
+      height: 215px;
     }
-    .feedback_user_info {
+  }
+  &_user {
+    display: flex;
+    gap: 16px;
+    .user_name {
       color: #fff;
-      .user_name {
-        font-size: $text_base;
-        font-weight: 700;
-        margin-bottom: 4px;
-        line-height: 1.5;
-      }
-      .user_company {
-        font-size: $text_small;
-        line-height: 1.5;
-      }
+      font-weight: 700;
+      margin-bottom: 4px;
+      line-height: 1.5;
+    }
+    .user_company {
+      color: #fff;
+      font-size: $text_small;
+      line-height: 1.5;
     }
   }
 }
@@ -286,6 +306,7 @@ header {
     font-size: $text_heading06;
     font-weight: 900;
     cursor: pointer;
+    transition: ease-in-out 0.2s;
     &:hover {
       background-color: #fff;
       color: $black_100;
@@ -298,4 +319,15 @@ header {
 
 footer {
   @include footer;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+  width: 12px;
+  height: 12px;
+}
+.swiper-pagination-bullet {
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
 }

@@ -20,6 +20,8 @@ $black_40: #d1d1d1;
 $black_20: #f2f2f2;
 $primary: #f18724;
 $surface: #f2efe7;
+
+// feedback section
 $logo_shadow: linear-gradient(
   90deg,
   #000000 0%,
@@ -39,3 +41,10 @@ $logo_shadow: linear-gradient(
   rgba(0, 0, 0, 0.0737185) 88.21%,
   rgba(0, 0, 0, 0) 100%
 );
+
+$feedback_card_shadow: 0px 100px 80px rgba(18, 18, 18, 0.07),
+  0px 41.7776px 33.4221px rgba(18, 18, 18, 0.0503198),
+  0px 22.3363px 17.869px rgba(18, 18, 18, 0.0417275),
+  0px 12.5216px 10.0172px rgba(18, 18, 18, 0.035),
+  0px 6.6501px 5.32008px rgba(18, 18, 18, 0.0282725),
+  0px 2.76726px 2.21381px rgba(18, 18, 18, 0.0196802);
