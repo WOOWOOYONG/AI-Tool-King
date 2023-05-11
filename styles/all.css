@@ -143,7 +143,8 @@ table {
 }
 
 .container {
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 1320px;
   padding: 0 12px;
 }
@@ -181,6 +182,7 @@ table {
 
 body {
   background-color: #020202;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .stay {
@@ -948,6 +950,9 @@ header .logo_name {
   font-weight: 400;
 }
 
+footer {
+  font-family: "Noto Sans TC", sans-serif;
+}
 footer .footer_top {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -1218,6 +1223,7 @@ img {
   }
 }
 .payment_detail_card {
+  cursor: pointer;
   border: 1px solid #525252;
   border-radius: 16px;
   margin-bottom: 24px;

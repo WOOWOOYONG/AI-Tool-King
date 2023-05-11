@@ -81,6 +81,7 @@ img {
   }
 
   &_detail_card {
+    cursor: pointer;
     border: 1px solid $black_80;
     border-radius: 16px;
     margin-bottom: 24px;

@@ -55,10 +55,6 @@ function initSwiper() {
       1043: {
         slidesPerView: 3,
       },
-      768: {
-        slidesPerView: 2,
-      },
-
       0: {
         slidesPerView: 1,
       },
